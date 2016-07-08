@@ -1,0 +1,1 @@
+# cordova-get-ext-path
