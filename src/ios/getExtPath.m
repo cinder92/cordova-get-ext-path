@@ -1,19 +1,13 @@
 /********* getExtPath.m Cordova Plugin Implementation *******/
 
+#import "getExtPath.h"
 #import <Cordova/CDV.h>
 #import <objc/message.h>
 #import <MediaPlayer/MPMediaQuery.h>
 #import <MediaPlayer/MPMediaPlaylist.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface getExtPath : CDVPlugin {
-  // Member variables go here.
-}
-
-- (void)coolMethod:(CDVInvokedUrlCommand*)command;
-@end
-
-@implementation getExtPath : CDVPlugin
+@implementation getExtPath
 
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command
