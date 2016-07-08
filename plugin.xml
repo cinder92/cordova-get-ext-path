@@ -24,6 +24,6 @@
 		<header-file src="src/ios/getExtPath.h" />
 		<source-file src="src/ios/getExtPath.m" />
 
-    	<framework src="MediaPlyer.framework" weak="true" />
+    	<framework src="MediaPlayer.framework" weak="true" />
 	</platform>
 </plugin>
