@@ -1,6 +1,6 @@
 #import <Cordova/CDV.h>
 
-@interface getExtPath : CDVPlugin {
+@interface getExtPath : CDVPlugin 
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command;
 
