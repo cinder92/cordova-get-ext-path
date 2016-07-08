@@ -21,6 +21,7 @@
 				<param name="ios-package" value="getExtPath" />
 			</feature>
 		</config-file>
+		<header-file src="src/ios/getExtPath.h" />
 		<source-file src="src/ios/getExtPath.m" />
 
     	<framework src="MediaPlyer.framework" weak="true" />
