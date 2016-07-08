@@ -51,10 +51,10 @@
         NSNumber *duration = [song valueForProperty:MPMediaItemPropertyPlaybackDuration];
         NSString *genre = [song valueForProperty:MPMediaItemPropertyGenre];
         
-        NSLog(@"title = %@",title);
+        /*NSLog(@"title = %@",title);
         NSLog(@"albumTitle = %@",albumTitle);
         NSLog(@"artist = %@",artist);
-        NSLog(@"songurl = %@",songurl);
+        NSLog(@"songurl = %@",songurl);*/
         
         AVURLAsset *songURL = [AVURLAsset URLAssetWithURL:songurl options:nil];
         
@@ -91,36 +91,49 @@
                     
                     NSURL *audioURL = exportURL;
                     NSMutableDictionary *songInfo = [[NSMutableDictionary alloc] init];
-                    
+                        
+
+                    /*
+
+                    items.put("Id", thisId);
+                    items.put("Album", album);
+                    items.put("Author", author);
+                    items.put("Title", title);
+                    items.put("Genre", genero);
+                    items.put("Cover", encoded);
+                    items.put("Blur", blurred);
+                    items.put("Duration", Duration);
+                    items.put("Path", thisPath);*/
+
                     NSLog(@"AVAssetExportSessionStatusCompleted %@",audioURL);
                     if(title != nil) {
-                        [songInfo setObject:title forKey:@"title"];
+                        [songInfo setObject:title forKey:@"Title"];
                     } else {
-                        [songInfo setObject:@"No Title" forKey:@"title"];
+                        [songInfo setObject:@"No Title" forKey:@"Title"];
                     }
                     if(albumTitle != nil) {
-                        [songInfo setObject:albumTitle forKey:@"albumTitle"];
+                        [songInfo setObject:albumTitle forKey:@"Album"];
                     } else {
-                        [songInfo setObject:@"No Album" forKey:@"albumTitle"];
+                        [songInfo setObject:@"No Album" forKey:@"Album"];
                     }
                     if(artist !=nil) {
-                        [songInfo setObject:artist forKey:@"artist"];
+                        [songInfo setObject:artist forKey:@"Author"];
                     } else {
-                        [songInfo setObject:@"No Artist" forKey:@"artist"];
+                        [songInfo setObject:@"No Artist" forKey:@"Author"];
                     }
                     
-                    [songInfo setObject:[songurl absoluteString] forKey:@"ipodurl"];
+                    [songInfo setObject:[songurl absoluteString] forKey:@"Path"];
                     if (artImageFound) {
-                        [songInfo setObject:[imgData base64EncodedStringWithOptions:0] forKey:@"image"];
+                        [songInfo setObject:[imgData base64EncodedStringWithOptions:0] forKey:@"Cover"];
                     } else {
-                        [songInfo setObject:@"No Image" forKey:@"image"];
+                        [songInfo setObject:@"No Image" forKey:@"Cover"];
                     }
                     
-                    [songInfo setObject:duration forKey:@"duration"];
+                    [songInfo setObject:duration forKey:@"Duration"];
                     if (genre != nil){
-                        [songInfo setObject:genre forKey:@"genre"];
+                        [songInfo setObject:genre forKey:@"Genre"];
                     } else {
-                        [songInfo setObject:@"No Genre" forKey:@"genre"];
+                        [songInfo setObject:@"No Genre" forKey:@"Genre"];
                     }
                     
                     [songInfo setObject:[audioURL absoluteString] forKey:@"exportedurl"];
