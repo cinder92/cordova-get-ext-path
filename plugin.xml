@@ -2,7 +2,7 @@
 <plugin id="cordova.plugin.getExtPath" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>getExtPath</name>
 	<js-module name="getExtPath" src="www/getExtPath.js">
-		<clobbers target="cordova.plugin.getExtPath" />
+		<clobbers target="cordova.plugins.getExtPath" />
 	</js-module>
 
 	<platform name="android">
