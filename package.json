@@ -1,0 +1,19 @@
+{
+  "name": "getExtPath",
+  "version": "0.0.1",
+  "description": "With this Cordova plugin you can get all music files from Android / iOS",
+  "cordova": {
+    "id": "cordova-plugin-get-ext-path",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Dante Cervantes",
+  "license": "ISC"
+}
