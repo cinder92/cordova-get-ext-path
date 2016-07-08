@@ -1,4 +1,4 @@
-package cordova.plugin.blurImage;
+package cordova.plugins.blurImage;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package cordova.plugin.getExtPath;
+package cordova.plugins.getExtPath;
 
 import android.app.Activity;
 import android.content.ContentResolver;
