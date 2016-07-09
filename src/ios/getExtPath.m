@@ -49,6 +49,7 @@
             artImageFound = YES;
         }
         
+        
         //store image in device
         NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString * basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
@@ -77,11 +78,13 @@
         
         exporter.outputFileType = @"com.apple.m4a-audio";
         
-        NSString *filename = [NSString stringWithFormat:@"%@.mp3",title];
+        NSString *filename = [NSString stringWithFormat:@"%@.m4a",title];
         
         NSString *outputfile = [documentDir stringByAppendingPathComponent:filename];
         
         NSURL *exportURL = [NSURL fileURLWithPath:outputfile];
+        
+        exporter.outputURL  = exportURL;
         
         NSURL *audioURL = exportURL;
         
@@ -106,7 +109,7 @@
             [songInfo setObject:@"No Artist" forKey:@"Author"];
         }
         
-        //[songInfo setObject:[songurl absoluteString] forKey:@"Path"];
+        //[songInfo setObject:[songurl absoluteString] forKey:@"Path"]; directorio de ipod-library
         [songInfo setObject:[audioURL absoluteString] forKey:@"Path"];
         if (artImageFound) {
             NSString* slash = @"/";
